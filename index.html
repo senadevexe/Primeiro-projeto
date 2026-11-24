@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <header class="card-header">
+      <h1>Criar conta</h1>
+      <p>Preencha seus dados para começar</p>
+    </header>
+
+    <form id="form-cadastro" action="/cadastrar" method="post">
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+      </div>
+
+      <div class="linha-dupla">
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15">
+        </div>
+
+        <div class="campo">
+          <label for="data-nascimento">Nascimento</label>
+          <input type="date" id="data-nascimento" name="data_nascimento">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <div class="input-senha">
+          <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" minlength="8" required>
+          <button type="button" id="toggle-senha" aria-label="Mostrar senha">Mostrar</button>
+        </div>
+      </div>
+
+      <div class="campo-checkbox">
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">Li e aceito os termos de uso</label>
+      </div>
+
+      <button type="submit" class="btn-submit">Cadastrar</button>
+    </form>
+  </main>
+
+  
+  <footer class="marca-dagua">
+    
+    <span>© SuaMarca</span>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
